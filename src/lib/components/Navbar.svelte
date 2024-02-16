@@ -1,4 +1,6 @@
 <script>
+	import Hamburger from '$lib/components/Hamburger.svelte';
+
 	let opened = false;
 	let navbarWidth;
 
@@ -9,7 +11,7 @@
 	{#if navbarWidth < 768}
 		<div class="mobile">
 			<a class="logo" href="/">Forge</a>
-			<!-- <Hamburger size="7.5vw" {opened} {onClick}/> -->
+			<Hamburger size="7.5vw" {opened} {onClick}/>
 		</div>
 	{:else}
 		<div class="desktop">
