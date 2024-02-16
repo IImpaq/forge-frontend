@@ -22,13 +22,15 @@
 
 	{#if opened || navbarWidth >= 768}
 		<nav class="navbar">
-			<ul>
+			<ul class="links">
 				<li><a class="link" href="/private" on:click="{onClick}">Private</a></li>
 				<li><a class="link" href="/business" on:click="{onClick}">Business</a></li>
 				<li><a class="link" href="/about" on:click="{onClick}">About</a></li>
+			</ul>
+			<ul class="organisational">
 				<MoreVertIcon class="" size="xs" />
-				<li><a class="link" href="/login" on:click="{onClick}">Login</a></li>
-				<li><a class="link" href="/register" on:click="{onClick}">Register</a></li>
+				<li><a class="btn-login" href="/login" on:click="{onClick}">Login</a></li>
+				<li><a class="btn-register" href="/register" on:click="{onClick}">Register</a></li>
 			</ul>
 		</nav>
 	{/if}
@@ -68,7 +70,9 @@
     }
 
     .navbar {
-      ul {
+			display: flex;
+
+      .links {
         margin: 0;
         list-style-type: none;
         display: flex;
@@ -80,12 +84,36 @@
             text-decoration: none;
             color: inherit;
           }
+        }
+      }
 
-          button {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
+      .organisational {
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        li {
+					a {
+            text-decoration: none;
+            color: inherit;
+					}
+
+          .btn-login {
+            background: var(--bg-semi);
+            padding: 0.75rem 1.5rem;
+            border-style: none;
+            border-radius: 0.5rem;
+						cursor: pointer;
+          }
+
+          .btn-register {
+            background: var(--cta-dark);
+            padding: 0.75rem 1.5rem;
+            border-style: none;
+            border-radius: 0.5rem;
+            color: var(--text-light);
           }
         }
       }

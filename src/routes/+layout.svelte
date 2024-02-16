@@ -30,6 +30,9 @@
     --bg-dark: #101010;
     --bg-semi: #EDEDED;
 
+    --cta-dark: #8447FF;
+    --cta-light: #8CFFDA;
+
     --text-dark: #101010;
     --text-light: #EEE;
     --text-semi: #707070;
