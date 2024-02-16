@@ -1,9 +1,14 @@
 # forge-frontend 
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+An experimental digital banking experience.
+Powered by Svelte.
+
+## Context
+
+This website does not represent a real company/product.
+It is purely built for educational purposes.
 
 ## Creating a project
-
 If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
