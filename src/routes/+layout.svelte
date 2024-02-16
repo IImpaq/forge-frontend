@@ -1,6 +1,9 @@
 <script>
 	import { fade } from "svelte/transition"
 
+	import "$lib/styles/fonts.scss"
+	import "$lib/styles/style.scss"
+
 	import Navbar from "$lib/components/Navbar.svelte"
 
 	export let data;
@@ -16,41 +19,6 @@
 {/key}
 
 <style lang="scss">
-  @font-face {
-    font-family: "Lato";
-    src: url("$lib/assets/fonts/Lato/Lato-Regular.ttf");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Lato";
-    src: url("$lib/assets/fonts/Lato/Lato-Bold.ttf");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Lato";
-    src: url("$lib/assets/fonts/Lato/Lato-Black.ttf");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  * {
-    font-family: "Lato", "Times New Roman", sans-serif;
-  }
-
-  body {
-    background: var(--bg-light);
-    color: var(--text-dark);
-    padding: 0;
-    margin: 0;
-  }
-
   main {
     padding: 0;
     margin: 0;
