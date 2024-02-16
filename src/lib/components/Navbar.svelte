@@ -1,5 +1,6 @@
 <script>
 	import Hamburger from '$lib/components/Hamburger.svelte';
+	import { MoreVertIcon } from '@indaco/svelte-iconoir/more-vert';
 
 	let opened = false;
 	let navbarWidth;
@@ -22,10 +23,12 @@
 	{#if opened || navbarWidth >= 768}
 		<nav class="navbar">
 			<ul>
-				<li><a class="link" href="/" on:click="{onClick}">About</a></li>
-				<li><a class="link" href="/resume" on:click="{onClick}">Resume</a></li>
-				<li><a class="link" href="/projects" on:click="{onClick}">Projects</a></li>
-				<li><a class="link" href="/contact" on:click="{onClick}">Contact</a></li>
+				<li><a class="link" href="/private" on:click="{onClick}">Private</a></li>
+				<li><a class="link" href="/business" on:click="{onClick}">Business</a></li>
+				<li><a class="link" href="/about" on:click="{onClick}">About</a></li>
+				<MoreVertIcon class="" size="xs" />
+				<li><a class="link" href="/login" on:click="{onClick}">Login</a></li>
+				<li><a class="link" href="/register" on:click="{onClick}">Register</a></li>
 			</ul>
 		</nav>
 	{/if}
